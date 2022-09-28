@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        th, td {
+            border: 1px solid #000;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <title>Document</title>
+</head>
+<body>
+    <h3><strong>BREAD (Browse, Read, Edit, Add, Delete)</strong></h3>
+    <table class="border ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>String</th>
+                <th>Integer</th>
+                <th>Float</th>
+                <th>Date</th>
+                <th>Boolean</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        
+        <% dataFile.forEach((item, index) => { %>
+            <tbody>
+                <tr>
+                    <td><%= index + 1%></td>
+                    <td><%= item.string %></td>
+                    <td><%= item.integer %></td>
+                    <td><%= item.float%></td>
+                    <td><%= item.date%></td>
+                    <td><%= item.boolean%></td>
+                    <td>
+                        <a href="">Edit</a>
+                        <a href="">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+            <% }) %>
+        </table>
+</body>
+</html>
