@@ -1,14 +1,10 @@
 const express = require('express')
+const fs = require('fs')
 const path = require('path')
-const dataFile = [
-  {
-    string: "Testing Data",
-    integer: 12,
-    float: 1.45,
-    date: "12 Desember 2017",
-    boolean: true
-  }
-]
+
+const dataPath = './json/data.json'
+const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+const dataFile = data
 
 const app = express()
 const port = 3000

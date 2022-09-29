@@ -1,0 +1,23 @@
+[
+    {
+        "string": "Testing Data",
+        "integer": 12,
+        "float": 1.45,
+        "date": "12 Desember 2017",
+        "boolean": true
+    },
+    {
+        "string": "Testing Data 2",
+        "integer": 11,
+        "float": 1.40,
+        "date": "17 Desember 2017",
+        "boolean": false
+    },
+    {
+        "string": "Testing Data 3",
+        "integer": 11,
+        "float": 1.40,
+        "date": "17 Desember 2017",
+        "boolean": false
+    }
+]
