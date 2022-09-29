@@ -1,0 +1,67 @@
+body {
+    margin: 2rem 4rem;
+    background-color: #CBD5E1;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.input-group {
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font: inherit;
+    color: black;
+    background-color: transparent;
+    outline: 2px solid #000;
+    width: 100%;
+}
+
+.input-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+}
+
+.input:focus+.input-label,
+.input:valid+.input-label {
+    transform: translate(10px, -14px) scale(.8);
+    color: white;
+    padding-inline: 5px;
+    background-color: #1E293B;
+    border-radius: 0.5rem;
+    padding: 4px 10px;
+    font-size: 1rem;
+}
+
+
+.input:is(:focus, :valid) {
+    outline-color: #1E293B;
+}
+
+#SaveButton {
+    background: #000;
+    padding: 0.5rem 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 2px 4px;
+}
+
+#BackButton {
+    background: #fff;
+    padding: 0.45rem 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #000;
+    border-radius: 1rem;
+    box-shadow: 2px 4px;
+    text-decoration: none;
+}
