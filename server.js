@@ -32,6 +32,11 @@ app.get('/edit', (req, res) => {
   res.render('edit')
 })
 
+app.get('/edit/:id', (req, res) => {
+  const id = req.params.id
+  res.render('edit', { item: data[id] })
+})
+
 app.get('/delete/:id', (req, res) => {
   const id = req.params.id
   data.splice(id, 1)
@@ -46,6 +51,11 @@ app.post('/add', (req, res) => {
   res.redirect('/')
 })
 
+app.post('/edit/:id', (req, res) => {
+  const id = req.params.id
+  data[id] = { string: req.body.string, integer: parseInt(req.body.integer), float: parseFloat(req.body.float), date: req.body.date, boolean: JSON.parse(req.body.boolean) }
+  res.redirect('/')
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
