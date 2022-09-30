@@ -6,75 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 2rem 4rem;
-            background-color: #CBD5E1;
-        }
-
-        h2 {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-
-        .input-group {
-            position: relative;
-            margin: 1.5rem 0;
-        }
-
-        .input {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font: inherit;
-            color: black;
-            background-color: transparent;
-            outline: 2px solid #000;
-            width: 100%;
-        }
-
-        .input-label {
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: translate(10px, 10px);
-            transition: transform .25s;
-        }
-
-        .input:focus+.input-label,
-        .input:valid+.input-label {
-            transform: translate(10px, -14px) scale(.8);
-            color: white;
-            padding-inline: 5px;
-            background-color: #1E293B;
-            border-radius: 0.5rem;
-            padding: 4px 10px;
-            font-size: 1rem;
-        }
-
-
-        .input:is(:focus, :valid) {
-            outline-color: #1E293B;
-        }
-
-        #SaveButton {
-            background: #000;
-            padding: 0.5rem 2rem;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            color: white;
-            border-radius: 1rem;
-            box-shadow: 2px 4px;
-        }
-
-        #BackButton {
-            background: #fff;
-            padding: 0.45rem 2rem;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            color: #000;
-            border-radius: 1rem;
-            box-shadow: 2px 4px;
-            text-decoration: none;
-        }
-    </style>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
 
     <title>Add</title>
 </head>
@@ -84,37 +16,39 @@
 
     <form id="str" action="" method="post">
         <div class="input-group">
-            <input type="text" id="string" class="input" required>
+            <input name="string" type="text" id="string" class="input" required>
             <label for="name" class="input-label">String</label>
         </div>
 
         <div class="input-group">
-            <input type="number" id="number" class="input" required>
+            <input name="integer" type="number" id="number" class="input" required>
             <label for="number" class="input-label">Integer</label>
         </div>
 
         <div class="input-group">
-            <input type="number" step="any" id="float" class="input" required>
+            <input name="float" type="number" step="any" id="float" class="input" required>
             <label for="float" class="input-label">Float</label>
         </div>
 
         <div class="input-group">
             <p>Date</p>
-            <input type="date" id="date" class="input" required>
+            <input name="date" type="date" id="date" class="input">
         </div>
 
         <div class="input-group">
             <p>Boolean</p>
-            <select value="" id="" class="input">
-                <option value="">-- Choose Boolean --</option>
+            <select name="boolean" value="" id="" class="input" required>
+                <option value="" selected disabled>-- Choose Boolean --</option>
                 <option value="true">True</option>
                 <option value="false">False</option>
             </select>
         </div>
 
         <div>
-            <br>
-            <input type="button" value="Save" id="SaveButton">
+            <form action="" method="post">
+                <br>
+                <button type="submit" id="SaveButton">Save</button>
+            </form>
             <a href="/" id="BackButton">Back</a>
         </div>
     </form>

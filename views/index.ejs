@@ -6,68 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 2rem 4rem;
-        }
-
-        h2 {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-
-        #tables {
-            font-family: Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        #tables td,
-        #tables th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        #tables tr:nth-child(even) {
-            background-color: #94A3B8;
-        }
-
-        #tables tr:hover {
-            background-color: #ddd;
-        }
-
-        #tables th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #0284C7;
-            color: white;
-        }
-
-        .edit {
-            background-color: #04AA6D;
-            color: #f2f2f2;
-            padding: 4px 10px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        .delete {
-            background-color: #BE123C;
-            color: #f2f2f2;
-            padding: 4px 10px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        .add {
-            background-color: #0284C7;
-            color: #f2f2f2;
-            padding: 6px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-    </style>
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
     <title>Index</title>
 </head>
 
@@ -90,10 +29,10 @@
         </thead>
 
         <tbody>
-            <% dataFile.forEach((item, index)=> { %>
+            <% data.forEach((item, index)=> { %>
                 <tr>
                     <td>
-                        <%= index + 1%>
+                        <%= index + 1 %>
                     </td>
                     <td>
                         <%= item.string %>
@@ -102,13 +41,13 @@
                         <%= item.integer %>
                     </td>
                     <td>
-                        <%= item.float%>
+                        <%= item.float %>
                     </td>
                     <td>
-                        <%= item.date%>
+                        <%= item.date %>
                     </td>
                     <td>
-                        <%= item.boolean%>
+                        <%= item.boolean %>
                     </td>
                     <td>
                         <a href="/edit/<%= index %>" class="edit">Edit</a>
@@ -118,7 +57,7 @@
                 <% }) %>
         </tbody>
     </table>
-
+    <br>
     <a class="add" href="/add">Add</a>
 </body>
 

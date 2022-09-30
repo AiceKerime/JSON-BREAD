@@ -7,17 +7,17 @@
         "boolean": true
     },
     {
-        "string": "Testing Data 2",
-        "integer": 11,
-        "float": 1.40,
-        "date": "17 Desember 2017",
+        "string": "Coba Lagi",
+        "integer": 99,
+        "float": 100.405,
+        "date": "20 November 2017",
         "boolean": false
     },
     {
-        "string": "Testing Data 3",
-        "integer": 11,
-        "float": 1.40,
-        "date": "17 Desember 2017",
+        "string": "Super sekali",
+        "integer": 0,
+        "float": 1.45,
+        "date": "",
         "boolean": false
     }
 ]
