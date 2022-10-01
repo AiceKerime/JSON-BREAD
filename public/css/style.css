@@ -32,7 +32,7 @@ h2 {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #0284C7;
+    background-color: #1E293B;
     color: white;
 }
 
@@ -105,19 +105,20 @@ h2 {
 
 #SaveButton {
     background: #0284C7;
-    padding: 0.5rem 2rem;
+    padding: 6px 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    border-radius: 1rem;
+    color: #f2f2f2;
+    border-radius: 0.5rem;
     font-size: medium;
+    text-decoration: none;
 }
 
 #BackButton {
-    background: #E11D48;
-    padding: 0.45rem 2rem;
+    background: #B91C1C;
+    padding: 1rem 2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #000;
-    border-radius: 1rem;
-    box-shadow: 2px 4px;
+    color: #f2f2f2;
+    padding: 6px 30px;
+    border-radius: 0.5rem;
     text-decoration: none;
 }

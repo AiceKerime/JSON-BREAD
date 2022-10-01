@@ -54,9 +54,12 @@ app.post('/add', (req, res) => {
 app.post('/edit/:id', (req, res) => {
   const id = req.params.id
   data[id] = { string: req.body.string, integer: parseInt(req.body.integer), float: parseFloat(req.body.float), date: req.body.date, boolean: JSON.parse(req.body.boolean) }
+  fs.writeFileSync(dataPath, JSON.stringify(data, null, 3))
   res.redirect('/')
 })
 
+
+// LISTEN
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

@@ -3,28 +3,21 @@
       "string": "Testing Data",
       "integer": 12,
       "float": 1.45,
-      "date": "12 Desember 2017",
+      "date": "2017-12-12",
       "boolean": true
    },
    {
       "string": "Coba Lagi",
       "integer": 99,
       "float": 100.405,
-      "date": "20 November 2017",
+      "date": "2017-11-20",
       "boolean": false
    },
    {
-      "string": "Super sekali",
-      "integer": 0,
+      "string": "Super Sekali",
+      "integer": 99,
       "float": 1.45,
       "date": "",
-      "boolean": false
-   },
-   {
-      "string": "Testing Euy",
-      "integer": 125412,
-      "float": 12.3,
-      "date": "2022-09-27",
       "boolean": false
    }
 ]
