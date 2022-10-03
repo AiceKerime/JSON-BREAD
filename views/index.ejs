@@ -13,53 +13,52 @@
 
 <body>
     <h2><strong>BREAD (Browse, Read, Edit, Add, Delete)</strong></h2>
-    <div>
+    <%- include ('search.ejs') %>
 
-    </div>
-    <table id="tables">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>String</th>
-                <th>Integer</th>
-                <th>Float</th>
-                <th>Date</th>
-                <th>Boolean</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <% data.forEach((item, index)=> { %>
+        <table id="tables">
+            <thead>
                 <tr>
-                    <td>
-                        <%= index + 1 %>
-                    </td>
-                    <td>
-                        <%= item.string %>
-                    </td>
-                    <td>
-                        <%= item.integer %>
-                    </td>
-                    <td>
-                        <%= item.float %>
-                    </td>
-                    <td>
-                        <%= item.date %>
-                    </td>
-                    <td>
-                        <%= item.boolean %>
-                    </td>
-                    <td>
-                        <a href="/edit/<%= index %>" class="edit">Edit</a>
-                        <a href="/delete/<%= index %>" class="delete">Delete</a>
-                    </td>
+                    <th>ID</th>
+                    <th>String</th>
+                    <th>Integer</th>
+                    <th>Float</th>
+                    <th>Date</th>
+                    <th>Boolean</th>
+                    <th>Actions</th>
                 </tr>
-                <% }) %>
-        </tbody>
-    </table>
-    <br>
-    <a class="add" href="/add">Add</a>
+            </thead>
+
+            <tbody>
+                <% data.forEach((item, index)=> { %>
+                    <tr>
+                        <td>
+                            <%= index + 1 %>
+                        </td>
+                        <td>
+                            <%= item.string %>
+                        </td>
+                        <td>
+                            <%= item.integer %>
+                        </td>
+                        <td>
+                            <%= item.float %>
+                        </td>
+                        <td>
+                            <%= item.date %>
+                        </td>
+                        <td>
+                            <%= item.boolean %>
+                        </td>
+                        <td>
+                            <a href="/edit/<%= index %>" class="edit">Edit</a>
+                            <a href="/delete/<%= index %>" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+        <br>
+        <a class="add" href="/add">Add</a>
 </body>
 
 </html>
