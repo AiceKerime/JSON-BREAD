@@ -23,8 +23,8 @@ app.set('view engine', 'ejs')
 
 // GET
 app.get('/', (req, res) => {
-  const page = 
-  res.render('index', { data })
+  const page =
+    res.render('index', { data })
 })
 
 app.get('/add', (req, res) => {
