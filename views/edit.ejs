@@ -39,8 +39,8 @@
             <p>Boolean</p>
             <select name="boolean" value="" id="" class="input" required>
                 <option value="" selected disabled>-- Choose Boolean --</option>
-                <option value="true">True</option>
-                <option value="false">False</option>
+                <option value=true <%=item.boolean==1 ? 'selected' : '' %>>True</option>
+                <option value=false <%=item.boolean==0 ? 'selected' : '' %>>False</option>
             </select>
         </div>
 

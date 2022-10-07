@@ -3,6 +3,7 @@ const path = require('path')
 const express = require('express')
 const moment = require('moment')
 const bodyParser = require('body-parser')
+const { Db } = require('mongodb')
 
 const dataPath = './json/data.json'
 const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
@@ -22,6 +23,7 @@ app.set('view engine', 'ejs')
 
 // GET
 app.get('/', (req, res) => {
+  const page = 
   res.render('index', { data })
 })
 
